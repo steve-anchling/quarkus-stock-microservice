@@ -6,8 +6,10 @@ quarkus:
     username: postgres
     password: postgres
     jdbc:
-      url: jdbc:postgresql://localhost:5432/icoachconnect
+      url: jdbc:postgresql://localhost:5432/quarkusdb
   hibernate-orm:
     dialect: org.hibernate.dialect.PostgreSQLDialect
     database:
       generation: drop-and-create
+    sql-load-script:
+      import.sql

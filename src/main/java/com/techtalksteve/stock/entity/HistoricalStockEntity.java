@@ -1,8 +1,12 @@
 package com.techtalksteve.stock.entity;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,15 +15,19 @@ import java.time.OffsetDateTime;
 import java.util.Currency;
 
 @Entity(name = "HISTORICAL_STOCK")
-@Data
+@Builder
+@Getter
+@Setter
+@ToString(callSuper = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class HistoricalStockEntity {
     @Id
     @GeneratedValue
     private Long id;
     private String symbol;
     private Currency currency;
-    @Column
-    private OffsetDateTime date;
+    private OffsetDateTime stockDate;
     private BigDecimal open;
     private BigDecimal low;
     private BigDecimal high;
