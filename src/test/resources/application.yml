@@ -1,0 +1,8 @@
+quarkus:
+  datasource:
+    jdbc:
+      db-kind: h2
+      driver: org.h2.Driver
+      url: jdbc:h2:tcp://localhost/mem:test
+    hibernate-orm:
+      dialect: org.hibernate.dialect.H2Dialect

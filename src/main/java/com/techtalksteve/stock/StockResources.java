@@ -9,6 +9,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.List;
 
 @Path("/stock")
 @AllArgsConstructor(onConstructor = @__(@Inject))
@@ -19,7 +20,7 @@ public class StockResources {
     @GET
     @Path("all")
     @Produces(MediaType.APPLICATION_JSON)
-    public HistoricalStockEntity stocks() {
-        return stockRepository.findAll().firstResult();
+    public List<HistoricalStockEntity> stocks() {
+        return stockRepository.findAll().list();
     }
 }

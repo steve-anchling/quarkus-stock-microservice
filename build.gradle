@@ -28,6 +28,9 @@ dependencies {
 
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
+    testImplementation 'io.quarkus:quarkus-test-h2'
+    testImplementation "org.assertj:assertj-core:${assertJVersion}"
+
 }
 
 group 'com.techtalksteve.stock'

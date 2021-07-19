@@ -1,1 +1,1 @@
-INSERT INTO historical_stock (id, close, currency, high, low, open, stockdate, symbol) VALUES (1, 139.96, 'USD', 140.00, 137.75, 139.96, '2021-07-02 02:00:00.000000', 'AAPL');
+INSERT INTO historical_stock (id, close, currency, high, low, open, stockdate, symbol) VALUES (1, 139.96, 'USD', 140.00, 137.75, 137.90, '2021-07-02 02:00:00.000000', 'AAPL');
